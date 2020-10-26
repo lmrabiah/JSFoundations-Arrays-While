@@ -77,7 +77,7 @@ function secondHalfOfArrayIfItIsEven(a) {
   } else {
     return [];
   }
-
+}
 
 secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi"]);
 secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]);
@@ -96,8 +96,13 @@ secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]);
  * - Use string method .endsWith()
  */
 function youGottaCalmDown(s) {
-  // Your code here
+  while (s.endsWith("!!")) {
+    s = s.slice(0, -1);
+    console.log(s);
+  }
+  return s;
 }
+console.log(youGottaCalmDown("Taylor Schwifting!!!!!!!!!!!"));
 
 module.exports = {
   isArrayLengthOdd,

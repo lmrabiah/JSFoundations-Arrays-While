@@ -9,21 +9,29 @@
  * isArrayLengthOdd([1, 2, 3, 4]) -> flase
  */
 function isArrayLengthOdd(a) {
-  // Your code here
+  if (a.length % 2 !== 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
-/**
- * isArrayLengthEven(a):
- * - receives array `a`
- * - returns true if array has an even number of elements
- * - returns false otherwise
- *
- * e.g.
- * isArrayLengthEven([1, 2, 3]) -> false
- * isArrayLengthEven([1, 2, 3, 4]) -> true
- */
+// /**
+//  * isArrayLengthEven(a):
+//  * - receives array `a`
+//  * - returns true if array has an even number of elements
+//  * - returns false otherwise
+//  *
+//  * e.g.
+//  * isArrayLengthEven([1, 2, 3]) -> false
+//  * isArrayLengthEven([1, 2, 3, 4]) -> true
+//  */
 function isArrayLengthEven(a) {
-  // Your code here
+  if (a.length % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -35,8 +43,10 @@ function isArrayLengthEven(a) {
  * addLailaToArray(["Mshary", "Hasan"]) -> ["Mshary", "Hasan", "Laila"]
  */
 function addLailaToArray(a) {
-  // Your code here
+  a.push("Laila");
+  return a;
 }
+addLailaToArray(["Mshary", "Hasan"]);
 
 /**
  * eliminateTeam(a):
@@ -47,9 +57,10 @@ function addLailaToArray(a) {
  * eliminateTeam(["Brazil", "Germany", "Italy"]) -> "Italy"
  */
 function eliminateTeam(a) {
-  // Your code here
+  const last = a.pop();
+  return last;
 }
-
+eliminateTeam(["Brazil", "Germany", "Italy"]);
 /**
  * secondHalfOfArrayIfItIsEven(a):
  * - receives array `a`
@@ -61,9 +72,15 @@ function eliminateTeam(a) {
  * secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]) -> []
  */
 function secondHalfOfArrayIfItIsEven(a) {
-  // Your code here
-}
+  if (a.length % 2 === 0) {
+    return a.slice(a.length / 2);
+  } else {
+    return [];
+  }
 
+
+secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi"]);
+secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]);
 /**
  * youGottaCalmDown(s):
  * - receives a string `s`
